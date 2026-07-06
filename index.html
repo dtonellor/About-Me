@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Tonello R. // Front-end Dev</title>
+<link rel="shortcut icon" href="favicon1.png" type="image/x-icon">
+<script src="https://kit.fontawesome.com/64a8d97a4c.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== BOOT SEQUENCE ===== -->
+  <div id="boot-screen">
+    <div class="boot-lines" id="boot-lines"></div>
+    <div class="boot-bar"><div class="boot-bar-fill" id="boot-bar-fill"></div></div>
+  </div>
+
+  <!-- ===== BACKGROUND FX ===== -->
+  <canvas id="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="hud-header">
+    <div class="logo">
+      <span class="logo-bracket">[</span>D_TONELLO<span class="logo-bracket">]</span>
+      <span class="logo-status"><i class="dot"></i>ONLINE</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="hud-nav" id="hud-nav">
+      <a href="#ficha" data-idx="01">FICHA</a>
+      <a href="#skills" data-idx="02">SKILLS</a>
+      <a href="#formacao" data-idx="03">FORMAÇÃO</a>
+      <a href="#projetos" data-idx="04">PROJETOS</a>
+      <a href="#contato" data-idx="05">CONTATO</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== FICHA / HERO ===== -->
+    <section id="ficha" class="section hero">
+      <div class="hero-grid">
+        <div class="hero-photo-wrap">
+          <div class="hero-frame">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/imgport.png" alt="Foto de Daniel Tonello" class="hero-photo">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+            <div class="frame-scan"></div>
+          </div>
+          <div class="id-card">
+            <span>ID: DT-2026</span>
+            <span>CLASSE: FRONT-END</span>
+            <span class="ok">STATUS: ATIVO</span>
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <p class="eyebrow">&gt; ACESSANDO FICHA DE DESENVOLVEDOR...</p>
+          <h1 class="glitch" data-text="DANIEL TONELLO R.">DANIEL TONELLO R.</h1>
+          <p class="hero-role">DESENVOLVEDOR FRONT-END <span class="cursor-blink">_</span></p>
+          <p class="hero-bio">
+            Desenvolvedor Front-end em ascensão, apaixonado por transformar designs complexos
+            em interfaces intuitivas e responsivas. Atualmente, foco meu domínio técnico em
+            <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong>,
+            desenvolvendo projetos práticos que demonstram minha capacidade de escrita de código limpo.
+            Embora esteja em busca da minha primeira oportunidade formal, dedico-me diariamente ao
+            aprimoramento técnico e à resolução de problemas lógicos — demonstrando proatividade,
+            facilidade de aprendizado e um forte desejo de contribuir para o sucesso de uma equipe
+            de tecnologia.
+          </p>
+
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/daniel-tonello-300755350/" target="_blank" rel="noopener" class="hud-btn">
+              <span class="hud-btn-icon">in</span> LINKEDIN
+            </a>
+            <a href="https://github.com/dtonellor" target="_blank" rel="noopener" class="hud-btn hud-btn-alt">
+              <span class="hud-btn-icon">&lt;/&gt;</span> GITHUB
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL <span>↓</span></div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <h2 class="section-title"><span class="section-idx">02</span> MINHAS SKILLS</h2>
+      <p class="section-sub">// diagnóstico de sistema — níveis de proficiência</p>
+
+      <div class="skills-grid">
+        <div class="skills-col">
+          <h3 class="skills-col-title">STACK TÉCNICA</h3>
+
+          <div class="skill-bar" data-value="75">
+            <div class="skill-bar-top"><span>HTML5</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:75%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="70">
+            <div class="skill-bar-top"><span>CSS3</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:70%"></div></div>
+          </div>
+
+          <div class="skill-bar skill-loading" data-value="50">
+            <div class="skill-bar-top"><span>JAVASCRIPT</span><span class="skill-pct">50%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:50%"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-col">
+          <h3 class="skills-col-title">ATRIBUTOS</h3>
+
+          <div class="skill-bar" data-value="90">
+            <div class="skill-bar-top"><span>COMUNICAÇÃO</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:90%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="70">
+            <div class="skill-bar-top"><span>LIDERANÇA</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:70%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="90">
+            <div class="skill-bar-top"><span>PROATIVIDADE</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:90%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="80">
+            <div class="skill-bar-top"><span>CRIATIVIDADE</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:80%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="80">
+            <div class="skill-bar-top"><span>TRABALHO EM EQUIPE</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:80%"></div></div>
+          </div>
+
+          <div class="skill-bar" data-value="90">
+            <div class="skill-bar-top"><span>ADAPTABILIDADE</span><span class="skill-pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="--val:90%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMAÇÃO ===== -->
+    <section id="formacao" class="section">
+      <h2 class="section-title"><span class="section-idx">03</span> FORMAÇÃO</h2>
+      <p class="section-sub">// log de eventos — trilha de aprendizado</p>
+ 
+      <div class="timeline">
+        <div class="timeline-line"></div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-node timeline-node-active"></div>
+          <div class="timeline-card timeline-card-active">
+            <span class="timeline-date">2026 — EM ANDAMENTO <span class="timeline-live">● CURSANDO</span></span>
+            <h3>ESTÁCIO</h3>
+            <p>Análise e Desenvolvimento de Sistemas (ADS)</p>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025 — 2026</span>
+            <h3>CURSOEMVIDEO</h3>
+            <p>HTML5, CSS3 e JavaScript</p>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2017 — 2018</span>
+            <h3>SENAC</h3>
+            <p>Jovem Aprendiz</p>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2013 — 2014</span>
+            <h3>EDUCA BRASIL</h3>
+            <p>Administração</p>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2011 — 2012</span>
+            <h3>UNIALCANCE</h3>
+            <p>Informática</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section id="projetos" class="section">
+      <h2 class="section-title"><span class="section-idx">04</span> PROJETOS DESENVOLVIDOS</h2>
+      <p class="section-sub">// repositório local — arquivos compilados com sucesso</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="Pokédex1.png" alt="Projeto POKEDEX" loading="lazy">
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO POKEDEX</h3>
+            <a href="https://dtonellor.github.io/Pokedex/" target="_blank">Visualize aqui</a>
+            <p class="project-desc">Projeto de desenvolvimento de Pokédex com auxilio de API.</p>
+            <p class="project-more">Neste projeto podemos testar o uso de APIs para o desenvolvimento de projetos mais complexos usando auxilio para criar interfaces e funcionalidades mais dinâmicas com o uso de frameworks.</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/projeto-01-videos.jpg" alt="Projeto de vídeos" loading="lazy">
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO DE VÍDEOS</h3>
+            <p class="project-desc">Projeto para treinar a inserção de vídeos.</p>
+            <p class="project-more">Neste projeto, o foco foi dominar a inserção de vídeos e a estruturação de galerias simples. Aprendi a trabalhar com embeds e a garantir que o conteúdo multimídia fosse apresentado de maneira limpa e funcional. Um passo essencial para entender a hierarquia de elementos e a organização de layouts no Front-end!</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/projeto-02-cordel.jpg" alt="Projeto Cordel" loading="lazy">
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO CORDEL</h3>
+            <p class="project-desc">Projeto para treinar efeito parallax em imagens.</p>
+            <p class="project-more">Para este projeto de Front-end, decidi não apenas apresentar um poema, mas criar uma experiência visual imersiva e dinâmica. O grande astro aqui foi o efeito Parallax! Desenvolvi um layout onde a imagem de fundo se move em uma velocidade diferente do texto, criando uma sensação de profundidade e movimento que envolve o usuário. Mais um passo na minha jornada de dominar o desenvolvimento responsivo e interativo!</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/projeto-03-android.jpg" alt="Projeto Android" loading="lazy">
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO ANDROID</h3>
+            <p class="project-desc">Projeto para treinar conteúdos e imagens dinâmicas.</p>
+            <p class="project-more">O objetivo principal deste projeto foi criar um blog informativo com foco total na experiência do usuário. Desenvolvi um design que prioriza a hierarquia visual, utilizando cores de destaque (vermelho/verde) para guiar o olhar do leitor. A página conta com imagens dinâmicas e responsivas, garantindo que o conteúdo visual seja exibido com clareza em qualquer dispositivo.</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/prtsocial.png" alt="Projeto de Redes Sociais" loading="lazy">
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO DE REDES SOCIAIS</h3>
+            <p class="project-desc">Projeto para demonstração de responsividade e múltiplas media queries.</p>
+            <p class="project-more">Para este projeto, decidi levar a responsividade a sério. O grande astro aqui foi o uso de Media Queries! Desenvolvi um layout onde cada breakpoint foi planejado para que a simulação iOS e a barra lateral de redes sociais se ajustassem perfeitamente a diferentes tamanhos de tela. Mais um passo na minha jornada de dominar o desenvolvimento responsivo!</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/prtlogin.png" alt="Projeto Tela de Login" loading="lazy">
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO TELA DE LOGIN</h3>
+            <p class="project-desc">Projeto para treinar a responsividade de formulários com uma tela de login.</p>
+            <p class="project-more">Este projeto consiste em uma página de login moderna desenvolvida com foco em UI Design e experiência do usuário. Utilizei CSS Flexbox/Grid para a estruturação e técnicas de Glassmorphism e efeitos de brilho externo (box-shadow glow) para criar uma estética vibrante. A interface conta com validação visual de campos, ícones integrados aos inputs e total adaptabilidade para diferentes tamanhos de tela.</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="https://dtonellor.github.io/Projeto-Portifolio/imagens/projeto-06-album.jpg" alt="Projeto álbum de fotos" loading="lazy">
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-body">
+            <h3>PROJETO ÁLBUM DE FOTOS</h3>
+            <p class="project-desc">Projeto para treinar conteúdos flexíveis usando CSS3 e Flexbox.</p>
+            <p class="project-more">Este projeto demonstra minha capacidade de criar interfaces de visualização de conteúdo ricas e visualmente equilibradas. Desenvolvi um moodboard digital dinâmico utilizando CSS Grid para organizar uma coleção variada de imagens em uma estrutura 'masonry-like' perfeitamente alinhada. O foco foi em UI e UX, garantindo que as imagens compusessem uma narrativa visual coesa e impactante.</p>
+            <button class="more-btn">SAIBA MAIS <span>+</span></button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTATO / FOOTER ===== -->
+    <section id="contato" class="section contact-section">
+      <div class="contact-panel">
+        <h2 class="section-title"><span class="section-idx">05</span> CONECTAR</h2>
+        <p class="section-sub"><i class="fa-regular fa-envelope"></i> dtonellor.dev@gmail.com</p>
+        <p class="section-sub"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5554991130651" target="_blank">(54)991130651</a></p>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/daniel-tonello-300755350/" target="_blank" rel="noopener" class="hud-btn">
+            <span class="hud-btn-icon">in</span> LINKEDIN
+          </a>
+          <a href="https://github.com/dtonellor" target="_blank" rel="noopener" class="hud-btn hud-btn-alt">
+            <span class="hud-btn-icon">&lt;/&gt;</span> GITHUB
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hud-footer">
+    <p><span class="footer-dot">●</span>PORTFÓLIO COMPILADO EM 2026 — DANIEL TONELLO R. </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+ 
