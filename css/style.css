@@ -505,6 +505,23 @@ h1,h2,h3{ font-family: var(--font-display); letter-spacing: 0.03em; }
   border-bottom: 1px solid var(--line);
 }
 
+.skills-list{
+  list-style: none;
+}
+
+.skills-list li{
+  font-family: var(--font-mono);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 0.05em;
+}
+
+.skills-list li:last-child{
+  border-bottom: none;
+}
+
 .skill-bar{ margin-bottom: 1.4rem; }
 
 .skill-bar-top{
