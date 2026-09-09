@@ -75,7 +75,7 @@
   const ctx = canvas.getContext('2d');
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const chars = 'アカサタナハマヤラワ01アイウエオ<>{}[]/#$%*+-01';
+  const chars = '素晴らしい仕事と豊かさが私に流れ来ます。';
   let fontSize = 16;
   let columns = 0;
   let drops = [];
